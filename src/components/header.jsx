@@ -42,7 +42,7 @@ export const Header = (props) => {
                   <img className='logo-image' src={props.data ? props.data.img : ''} alt='' />{' '}
                 </div>
                 <a
-                  href='#features'
+                  href='/signup'
                   className='btn btn-custom btn-lg page-scroll'
                 >
                   Apply Now

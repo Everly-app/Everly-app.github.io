@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Navigation } from './components/navigation'
 import { Header } from './components/header'
+import { SignUp } from './components/signup'
 // import { Features } from './components/features'
 // import { About } from './components/about'
 import { ComingSoon } from './components/comingsoon'
@@ -16,7 +18,7 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
   speedAsDuration: true,
 })
 
-const App = () => {
+const LandingPage = () => {
   const [landingPageData, setLandingPageData] = useState({})
   useEffect(() => {
     setLandingPageData(JsonData)
@@ -35,6 +37,17 @@ const App = () => {
       <Footer />
     </div>
   )
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route exact path="/" element={<LandingPage />} />
+        <Route path="/signup" element={<SignUp />} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App

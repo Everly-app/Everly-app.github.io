@@ -6,6 +6,9 @@ body, html {
 	font-weight: 400;
 	width: 100% !important;
 	height: 100% !important;
+	overflow : scroll;
+	overscroll-behavior-x: auto;
+	overscroll-behavior-y: none;
 }
 h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
