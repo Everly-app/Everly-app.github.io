@@ -391,13 +391,21 @@ header .intro-text {
 }
 /* Services Section */
 #services {
-	padding: 100px 0;
+	padding: 80px 0 0px 0;
 	background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
 	color: #fff;
 }
 #services .service-desc {
 	margin: 10px 10px 20px;
+	padding: 0px 0 35px 0;
 }
+@media (min-width: 768px) {
+	.row-fluid {
+	  display: flex;
+	  align-items: flex-end;
+	  text-align: center;
+	}
+  }
 #services h2 {
 	color: #fff;
 }
