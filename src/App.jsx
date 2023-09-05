@@ -44,7 +44,7 @@ function App() {
     <Router>
       <Routes>
         <Route exact path="/" element={<LandingPage />} />
-        <Route path="/signup" element={<SignUp />} />
+        <Route exact path="/signup" element={<SignUp />} />
       </Routes>
     </Router>
   );
