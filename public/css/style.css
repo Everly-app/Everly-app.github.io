@@ -248,13 +248,24 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin-bottom: 60px;
 }
 .intro .logo-image {
-	width: 30%;
+	width: 100%;
 	padding: 0 0 50px 0;
 }
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 350px;
 	text-align: left;
+}
+@media only screen and (max-width: 1000px) {
+	header .intro-text {
+		padding-top: 300px;
+		padding-bottom: 350px;
+		text-align: center;
+	}
+	.intro .logo-image {
+		width: 75%;
+		padding: 0 0 50px 0;
+	}
 }
 /* Features Section */
 #features {
@@ -399,7 +410,7 @@ header .intro-text {
 	margin: 10px 10px 20px;
 	padding: 0px 0 35px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
 	.row-fluid {
 	  display: flex;
 	  align-items: flex-end;

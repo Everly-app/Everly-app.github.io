@@ -9,10 +9,9 @@ export const Header = (props) => {
           <div className='container'>
           
             <div className='row fade-in-image'>
-              <div className='col-md-8 col-md-offset-0 intro-text'>
-                <div className='logo-image'>
-                  {' '}
-                  <img src={props.data ? props.data.img : ''} alt='' />{' '}
+              <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
+                <div>
+                  <img className='logo-image' src={props.data ? props.data.img : ''} alt='' />{' '}
                 </div>
                 <a
                   href='#features'
