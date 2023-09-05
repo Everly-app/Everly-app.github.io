@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Navigation } from './components/navigation'
 import { Header } from './components/header'
 import { SignUp } from './components/signup'
