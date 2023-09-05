@@ -1,4 +1,5 @@
 import ParticlesBg from "particles-bg";
+import { Link } from "react-router-dom";
 
 export const Header = (props) => {
   let config = {
@@ -41,12 +42,12 @@ export const Header = (props) => {
                 <div>
                   <img className='logo-image' src={props.data ? props.data.img : ''} alt='' />{' '}
                 </div>
-                <a
-                  href='/signup'
+                <Link
+                  to='/signup'
                   className='btn btn-custom btn-lg page-scroll'
                 >
                   Apply Now
-                </a>{' '}
+                </Link>{' '}
               </div>
             </div>
           </div>
