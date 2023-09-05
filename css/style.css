@@ -316,7 +316,7 @@ header .intro-text {
 #comingsoon button {
 	color: #000000;
 	padding: 10px 30px;
-	border-radius: 100px;
+	border-radius: 15px;
 }
 #comingsoon hr {
 	position: relative;
@@ -326,6 +326,14 @@ header .intro-text {
 	width: 100%;
 	bottom: 0;
 	left: 0;
+}
+@media (max-width: 768px) {
+	#comingsoon .comingsoon-text {
+		display: none;
+	}
+	#comingsoon .apple-store {
+		text-align: center;
+	}
 }
 #comingsoon .comingsoon-text li {
 	margin-bottom: 6px;
