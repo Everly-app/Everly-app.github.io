@@ -12,7 +12,7 @@ const CircleContainer = () => {
     // Calculate the number of circles based on screen area and circle size
     const circlesPerRow = Math.floor(screenWidth / circleSize);
     const rows = Math.floor(screenHeight / circleSize);
-    const numCircles = circlesPerRow * rows / 5;
+    const numCircles = circlesPerRow * rows / 3;
 
     for (let i = 0; i < numCircles; i++) {
       const circle = document.createElement('div');
