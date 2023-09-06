@@ -1,43 +1,42 @@
-import ParticlesBg from "particles-bg";
 import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+
+const CircleContainer = () => {
+  useEffect(() => {
+    const container = document.querySelector('.circle-container');
+    // Calculate the available screen area
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    const circleSize = 100; // Adjust the circle size as needed
+
+    // Calculate the number of circles based on screen area and circle size
+    const circlesPerRow = Math.floor(screenWidth / circleSize);
+    const rows = Math.floor(screenHeight / circleSize);
+    const numCircles = circlesPerRow * rows / 5;
+
+    for (let i = 0; i < numCircles; i++) {
+      const circle = document.createElement('div');
+      circle.className = `circle circle-${Math.floor(Math.random() * 3) + 3}s`;
+      circle.style.left = `${Math.random() * 100}%`;
+      circle.style.top = `${Math.random() * 100}%`;
+      const size = Math.random() * 75 + 75;
+      circle.style.width = `${size}px`;
+      circle.style.height = `${size}px`;
+      container.appendChild(circle);
+    }
+  }, []);
+
+  return <div className="circle-container"></div>;
+};
 
 export const Header = (props) => {
-  let config = {
-    num: [20, 30],
-    rps: 10,
-    radius: [20, 30],
-    life: [1, 15],
-    theta: [-4000, -4000],
-    v: [0, 0],
-    alpha: [100, 100],
-    scale: [1, 1],
-    position: "all", // all or center or {x:1,y:1,width:100,height:100}
-    color: "radial-gradient(#ffffff00, #ffffffff)",
-    cross: "dead", // cross or bround
-    random: null,  // or null,
-    g: 0,    // gravity
-    // f: [-0.1, 0.1], // force
-    onParticleUpdate: (ctx, particle) => {
-        ctx.beginPath();
-        ctx.arc(particle.p.x, particle.p.y, particle.radius * 2, Math.PI * 2, false);
-        const my_gradient = ctx.createRadialGradient(
-          particle.p.x, particle.p.y, particle.radius * 0.5,
-          particle.p.x, particle.p.y, particle.radius);
-        my_gradient.addColorStop(0, "#ffff0008");
-        my_gradient.addColorStop(1, "#ffff0005");
-        ctx.fillStyle = my_gradient;
-        ctx.fill();
-        ctx.closePath();
-    }
-  };
   return (
     <header id='header'>
       <div className='intro'>
-        <ParticlesBg type="custom" config={config} bg={{zIndex: 0, position:"absolute", top:0}} />
+        <CircleContainer />
         <div className='overlay'>
           <div className='container'>
-          
-            <div className='row fade-in-image'>
+            <div className='row fade-in'>
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
                 <div>
                   <img className='logo-image' src={props.data ? props.data.img : ''} alt='' />{' '}
