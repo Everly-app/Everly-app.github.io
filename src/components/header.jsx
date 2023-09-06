@@ -33,9 +33,9 @@ export const Header = (props) => {
   return (
     <header id='header'>
       <div className='intro'>
-        <CircleContainer />
         <div className='overlay'>
           <div className='container'>
+            <CircleContainer />
             <div className='row fade-in'>
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
                 <div>
