@@ -17,9 +17,9 @@ const CircleContainer = () => {
     for (let i = 0; i < numCircles; i++) {
       const circle = document.createElement('div');
       circle.className = `circle circle-${Math.floor(Math.random() * 3) + 3}s`;
-      circle.style.left = `${Math.random() * 100}%`;
-      circle.style.top = `${Math.random() * 100}%`;
       const size = Math.random() * 75 + 75;
+      circle.style.left = `calc(${Math.random() * 100}% - ${size}px - 1px)`;
+      circle.style.top = `calc(${Math.random() * 100}% - ${size}px - 1px)`;
       circle.style.width = `${size}px`;
       circle.style.height = `${size}px`;
       container.appendChild(circle);
@@ -33,9 +33,9 @@ export const Header = (props) => {
   return (
     <header id='header'>
       <div className='intro'>
+            <CircleContainer />
         <div className='overlay'>
           <div className='container'>
-            <CircleContainer />
             <div className='row fade-in'>
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
                 <div>
