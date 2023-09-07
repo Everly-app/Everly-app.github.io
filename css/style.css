@@ -493,7 +493,10 @@ header .intro-text {
 	.row-fluid {
 	  display: flex;
 	  align-items: flex-end;
-	  text-align: center;
+	}
+	#services .service-desc {
+		margin: 10px 10px 20px;
+		padding: 0px 0 35px 0;
 	}
   }
 #services h2 {
@@ -809,4 +812,31 @@ color: #777;
 	100% {
 	  opacity: 1;
 	}
+  }
+/* Custom styles for the paging lines */
+.carousel-container {
+}
+.carousel-item {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end; /* Align content to the bottom */
+	height: 100%;
+}
+.custom-paging-dots {
+	display: flex;
+	justify-content: center;
+	padding: 0 0 100px 0;
+  }
+  
+  .custom-paging-line {
+	width: 50px; /* Adjust the line width as needed */
+	height: 2px; /* Adjust the line height as needed */
+	background-color: gray; /* Line color */
+	margin: 0 5px; /* Adjust the margin between lines as needed */
+	cursor: pointer;
+  }
+  
+  .custom-paging-line.active {
+	background-color: blue; /* Active line color */
   }
