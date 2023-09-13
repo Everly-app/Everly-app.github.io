@@ -813,30 +813,29 @@ color: #777;
 	  opacity: 1;
 	}
   }
-/* Custom styles for the paging lines */
-.carousel-container {
+/* Custom styles for Alice Carousel */
+.alice-carousel__dots-item {
+	background: black !important;
+	border-radius: 0% !important;
+	width: 70px !important;
+	height: 2px !important;
+	margin-bottom: 16px;
 }
-.carousel-item {
+.alice-carousel__dots-item:not(:last-child) {
+	margin-right: 15px !important;
+}
+.custom-carousel-navigation-button {
 	text-align: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end; /* Align content to the bottom */
-	height: 100%;
-}
-.custom-paging-dots {
-	display: flex;
-	justify-content: center;
-	padding: 0 0 100px 0;
+	color: #000000;
+	font-size: 5vh;
+	border: none;
+	background-color: transparent;
   }
-  
-  .custom-paging-line {
-	width: 50px; /* Adjust the line width as needed */
-	height: 2px; /* Adjust the line height as needed */
-	background-color: gray; /* Line color */
-	margin: 0 5px; /* Adjust the margin between lines as needed */
-	cursor: pointer;
+.alice-carousel__prev-btn,
+.alice-carousel__next-btn {
+	display: none !important;
   }
-  
-  .custom-paging-line.active {
-	background-color: blue; /* Active line color */
+  .alice-carousel__stage {
+  }
+  .alice-carousel__stage_item {
   }
