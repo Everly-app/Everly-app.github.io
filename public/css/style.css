@@ -6,9 +6,12 @@ body, html {
 	font-weight: 400;
 	width: 100% !important;
 	height: 100% !important;
-	overflow : scroll;
-	overscroll-behavior-x: auto;
-	overscroll-behavior-y: none;
+}
+html {
+	overflow: hidden;
+}
+body {
+	overflow: scroll;
 }
 h2, h3, h4 {
 	font-family: 'Raleway', sans-serif;
@@ -493,7 +496,10 @@ header .intro-text {
 	.row-fluid {
 	  display: flex;
 	  align-items: flex-end;
-	  text-align: center;
+	}
+	#services .service-desc {
+		margin: 10px 10px 20px;
+		padding: 0px 0 35px 0;
 	}
   }
 #services h2 {
@@ -809,4 +815,71 @@ color: #777;
 	100% {
 	  opacity: 1;
 	}
+  }
+/* Custom styles for Carousel */
+.react-multi-carousel-list {
+	display: flex;
+	align-items: center;
+	overflow: hidden;
+	position: relative;
+	margin-bottom: 50px !important;
+}
+.react-multi-carousel-item {
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	margin-bottom: 20px !important;
+}
+.react-multi-carousel-dot-list {
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	left: 0;
+	right: 0;
+	justify-content: center;
+	list-style: none;
+	text-align: center;
+  }
+  .react-multi-carousel-dot button {
+	display: inline-block;
+	width: 70px !important;
+	height: 2px !important;
+	border-radius: 0% !important;
+	opacity: 1;
+	padding: 5px 5px 5px 5px;
+	box-shadow: none;
+	border-width: 0px !important;
+	border-style: solid;
+	border-color: transparent;
+	padding: 0;
+	margin-right: 15px !important;
+	outline: 0;
+	cursor: pointer;
+  }
+  .react-multi-carousel-dot button:hover:active {
+	background: #080808;
+  }
+  .react-multi-carousel-dot--active button {
+	background: #080808;
+  }
+.react-multiple-carousel__arrow {
+	position: absolute;
+	outline: none;
+	transition: all 0.5s;
+	border-radius: 35px;
+	z-index: 1000;
+	border: none;
+	background: transparent !important;
+	min-width: 43px;
+	min-height: 43px;
+	opacity: 1;
+	cursor: pointer;
+  }
+.react-multiple-carousel__arrow::before {
+	font-size: 30px !important;
+	color: black !important;
+	display: block;
+	font-family: revicons;
+	text-align: center;
+	z-index: 2;
+	position: relative;
   }
