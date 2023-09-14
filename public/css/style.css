@@ -325,6 +325,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	width: 100%;
 	padding: 0 0 50px 0;
 }
+header .apply-now {
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	font-weight: 700;
+}
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 350px;
@@ -367,13 +371,14 @@ header .intro-text {
 #comingsoon h2 {
 	font-family: 'Raleway', sans-serif;
 	font-size: 30px;
-	font-weight: 100;
+	font-weight: 500;
 	line-height: 40px;
 	margin: 0 0 20px 0;
 	text-transform: none;
 	color: #ffffff;
 }
 #comingsoon h3 {
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
 	position: relative;
 	margin-bottom: 15px;
 	padding-bottom: 15px;

@@ -43,7 +43,7 @@ export const Header = (props) => {
                 </div>
                 <Link
                   to='/signup'
-                  className='btn btn-custom btn-lg page-scroll'
+                  className='btn btn-custom btn-lg page-scroll apply-now'
                 >
                   Apply Now
                 </Link>{' '}
