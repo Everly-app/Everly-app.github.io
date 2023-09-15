@@ -178,9 +178,8 @@ hr {
 	border: 0;
 }
 .btn-custom:hover, .btn-custom:focus, .btn-custom.focus, .btn-custom:active, .btn-custom.active {
-	color: #fff;
 	background-image: none;
-	background-color: #d4af37;
+	opacity: 50%;
 }
 .btn:active, .btn.active {
 	background-image: none;
@@ -277,7 +276,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	100% { opacity: 0; }
   }
   
-	50% { opacity: 1; }
+  @-webkit-keyframes fadeOut {
+	0% { opacity: 1; }
 	100% { opacity: 0; }
   }
   
@@ -298,11 +298,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	position: relative;
 	width: 100%;
 	padding: 0;
-	background-image: url("../../img/background.png");
+	background-image: url("../../img/background.png"), radial-gradient(100% 239.32% at 0% 0%, rgba(37, 37, 37, 0.87) 0%, rgba(2, 2, 2, 0.87) 100%);
+	box-shadow: inset 0 0 0 2000px rgba(40, 40, 40, 0.3);
+	background-blend-mode: overlay;
 	background-position: center;
 	-moz-background-size: cover;
-	background-size: cover;
 	-o-background-size: cover;
+	background-size: cover;
 }
 .intro .overlay {
 	background: rgba(0,0,0,0.0);
@@ -340,6 +342,10 @@ header .apply-now {
 	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 	font-weight: 700;
 }
+header .learn-more {
+	position: absolute;
+	bottom: 15%;
+}
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 350px;
@@ -363,9 +369,18 @@ header .intro-text {
 	}
 	header .apply-now-btn {
 		position: absolute;
-		bottom: 15%;
+		bottom: 20%;
 		left: 20%;
 		right: 20%;
+	}
+	header .learn-more {
+		position: absolute;
+		margin: auto;
+		width: 30%;
+		left: 0;
+		right: 0;
+		bottom: 5%;
+		text-align: center;
 	}
 	header .intro-text {
 		height: 100%;
@@ -392,7 +407,7 @@ header .intro-text {
 /* ComingSoon Section */
 #comingsoon {
 	padding: 25px 0;
-	background-color: #000000;
+	background: radial-gradient(100% 239.32% at 0% 0%, #252525 0%, #020202 100%);
 	color: #ffffff;
 }
 #comingsoon h2 {
@@ -419,10 +434,26 @@ header .intro-text {
 	right: 0;
 	text-align: right;
 }
+#comingsoon .apple-store-coming-soon {
+	color: transparent;
+	width: 50%;
+	margin: 0 5% 4px 0;
+	background-color: transparent;
+}
+#comingsoon .apple-store-image {
+	color: transparent;
+	width: 60%;
+	background-color: transparent;
+	opacity: 50%;
+}
 #comingsoon button {
-	color: #000000;
-	padding: 10px 30px;
-	border-radius: 15px;
+	position: relative;
+	color: transparent;
+	border: none;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+	opacity: 50%;
 }
 #comingsoon hr {
 	position: relative;
@@ -433,16 +464,35 @@ header .intro-text {
 	bottom: 0;
 	left: 0;
 }
+#comingsoon .comingsoon-quote-icon {
+	width: 4%;
+	margin: 0 0 2% 1.5%;
+	list-style: none;
+	padding: 0;
+	background-color: transparent;
+}
 @media (max-width: 768px) {
 	#comingsoon .comingsoon-text {
 		display: none;
 	}
 	#comingsoon .apple-store {
+		margin: 15px 0 10px 0;
 		text-align: center;
 	}
+	#comingsoon .apple-store-coming-soon {
+		width: 50%;
+		margin: 0 0 4px 0;
+		text-align: center;
+	}
+	#comingsoon hr {
+		display: none;
+	}
+	#comingsoon .comingsoon-quote-icon {
+		display: none;
+	}
 }
-#comingsoon .comingsoon-text li {
-	margin-bottom: 6px;
+#comingsoon .comingsoon-text {
+	margin-bottom: 20px;
 	margin-left: 6px;
 	list-style: none;
 	padding: 0;
@@ -517,23 +567,15 @@ header .intro-text {
 /* Services Section */
 #services {
 	padding: 80px 0 0px 0;
-	background: linear-gradient(to right, #ffffff 0%, #ffffff 100%);
-	color: #fff;
+	margin: 0;
+	background: white;
+	color: white;
 }
-#services .service-desc {
-	margin: 10px 10px 20px;
+#services .service-image {
+	width: 90%;
+	margin: 10px 0px 60px 0px;
 	padding: 0px 0 35px 0;
 }
-@media (min-width: 1000px) {
-	.row-fluid {
-	  display: flex;
-	  align-items: flex-end;
-	}
-	#services .service-desc {
-		margin: 10px 10px 20px;
-		padding: 0px 0 35px 0;
-	}
-  }
 #services h2 {
 	color: #fff;
 }
@@ -547,9 +589,6 @@ header .intro-text {
 	margin-left: -30px;
 	left: 50%;
 }
-#services .service_img {
-	position: absolute;
-}
 #services h3 {
 	font-weight: 500;
 	padding: 5px 0;
@@ -557,9 +596,6 @@ header .intro-text {
 }
 #services p {
 	color: #979797;
-}
-#services .service-desc {
-	margin-bottom: 40px;
 }
 /* Portfolio Section */
 #portfolio {
@@ -854,12 +890,12 @@ color: #777;
 	align-items: center;
 	overflow: hidden;
 	position: relative;
-	margin-bottom: 50px !important;
+	margin-bottom: 10px !important;
 }
 .react-multi-carousel-item {
 	transform-style: preserve-3d;
 	backface-visibility: hidden;
-	margin-bottom: 20px !important;
+	margin-bottom: 90px !important;
 }
 .react-multi-carousel-dot-list {
 	position: absolute;
