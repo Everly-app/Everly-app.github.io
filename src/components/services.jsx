@@ -32,23 +32,18 @@ export const Services = (props) => {
           containerClass="carousel-container"
           itemClass="carousel-item-padding-40-px"
         >
-          <img src={'img/services/pick_a_restaurant.svg'} alt='' />
-          <img src={'img/services/skip_the_messaging.svg'} alt='' />
-          <img src={'img/services/go_on_a_date.svg'} alt='' />
+          {props.data
+            ? props.data.map((d, i) => (
+              <img key={`service-image-${i}`} src={d.img} alt='' />
+              ))
+            : <div key='loading'>loading</div>}
         </Carousel>
         ) : (
-          <div className='row-fluid'>
+          <div className='row'>
             {props.data
               ? props.data.map((d, i) => (
-                  <div key={`${d.name}-${i}`} className='col-md-4'>
-                    {' '}
-                    <div>
-                      <img src={d.img} alt='' />{' '}
-                    </div>
-                    <div className='service-desc'>
-                      <h3>{d.name}</h3>
-                      <p>{d.text}</p>
-                    </div>
+                  <div key={`${d.name}-${i}`} className='col-md-4 col-md-offset-0'>
+                    <img className='service-image' src={d.img} alt='' />
                   </div>
                 ))
               : 'loading'}

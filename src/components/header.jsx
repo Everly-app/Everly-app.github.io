@@ -12,7 +12,7 @@ const CircleContainer = () => {
     // Calculate the number of circles based on screen area and circle size
     const circlesPerRow = Math.floor(screenWidth / circleSize);
     const rows = Math.floor(screenHeight / circleSize);
-    const numCircles = circlesPerRow * rows / 4;
+    const numCircles = circlesPerRow * rows / 5;
 
     for (let i = 0; i < numCircles; i++) {
       const circle = document.createElement('div');
@@ -38,8 +38,8 @@ export const Header = (props) => {
           <div className='container'>
             <div className='row fade-in'>
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
-                <img className='logo-image' src={props.data ? props.data.logo : ''} alt='' />{' '}
-                <img className='logo-slogan' src={props.data ? props.data.slogan : ''} alt='' />{' '}
+                <img className='logo-image' src={props.data ? props.data.logo : ''} alt='Merlo' />
+                <img className='logo-slogan' src={props.data ? props.data.slogan : ''} alt='Real dating happens in person.' />
                 <div className='apply-now-btn'>
                   <Link
                     to='/signup'
@@ -47,6 +47,9 @@ export const Header = (props) => {
                   >
                     Apply Now
                   </Link>
+                </div>
+                <div>
+                  <img className='learn-more' src={props.data ? props.data.learn_more : ''} alt='Learn More' />
                 </div>
               </div>
             </div>

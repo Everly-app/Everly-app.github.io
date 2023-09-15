@@ -3,7 +3,8 @@
         "title": "MERLO",
         "paragraph": "Real dating happens in person.",
         "logo": "img/main logo.svg",
-        "slogan": "img/logo slogan.svg"
+        "slogan": "img/logo slogan.svg",
+        "learn_more": "img/learn_more.svg"
     },
     "About": {
         "paragraph": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -118,6 +119,7 @@
     ],
     "ComingSoon": {
         "slogan": "Merlo was created by you for you:",
+        "quote_icon": "img/quote.svg",
         "quote": "The fact that Merlo let's me choose where to go before actually matching is genius! Oh, and I hate texting.",
         "img": "img/apple_store_button.svg"
     }
