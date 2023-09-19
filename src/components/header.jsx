@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useEffect } from "react";
+import { useMediaQuery } from 'react-responsive';
 
 const CircleContainer = () => {
   useEffect(() => {
@@ -30,6 +31,8 @@ const CircleContainer = () => {
 };
 
 export const Header = (props) => {
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
+
   return (
     <header id='header'>
       <div className='intro'>
@@ -40,6 +43,9 @@ export const Header = (props) => {
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
                 <img className='logo-image' src={props.data ? props.data.logo : ''} alt='Merlo' />
                 <img className='logo-slogan' src={props.data ? props.data.slogan : ''} alt='Real dating happens in person.' />
+                {isMobile ?
+                ''
+                :
                 <div className='apply-now-btn'>
                   <Link
                     to='/signup'
@@ -48,8 +54,9 @@ export const Header = (props) => {
                     Apply Now
                   </Link>
                 </div>
+                }
                 <div>
-                  <img className='learn-more' src={props.data ? props.data.learn_more : ''} alt='Learn More' />
+                  <img className='learn-more' src={props.data ? (isMobile ? props.data.learn_more_mobile : props.data.learn_more) : ''} alt='Learn More' />
                 </div>
               </div>
             </div>

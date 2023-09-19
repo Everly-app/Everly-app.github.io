@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
+import { useMediaQuery } from 'react-responsive';
+
 export const ComingSoon = (props) => {
+  const isMobile = useMediaQuery({ maxWidth: 1000 });
+
   return (
     <div id='comingsoon'>
       <div className='container'>
@@ -25,11 +30,19 @@ export const ComingSoon = (props) => {
               <div className='row'>
                 <img className='apple-store-coming-soon' src='img/coming_soon.svg' alt='apple store' />
               </div>
-              <div className='row'>
-                <a href=".">
-                  <img className='apple-store-image' src='img/apple_store_button.svg' alt='apple store' />
-                </a>
-              </div>
+              {isMobile ?
+                <div className='row'>
+                  <Link to="/signup">
+                    <img className='apply-now-btn' src='img/apply-now-mobile.svg' alt='Apply Now' />
+                  </Link>
+                </div>
+                :
+                <div className='row'>
+                  <a href=".">
+                    <img className='apple-store-image' src='img/apple_store_button.svg' alt='apple store' />
+                  </a>
+                </div>
+              }
             </div>
           </div>
           <hr className="comingsoon-hr" />

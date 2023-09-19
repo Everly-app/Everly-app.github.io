@@ -30,7 +30,7 @@ export const Services = (props) => {
           customTransition="transform 1000ms ease-in-out"
           transitionDuration={1000}
           containerClass="carousel-container"
-          itemClass="carousel-item-padding-40-px"
+          itemClass="my-carousel"
         >
           {props.data
             ? props.data.map((d, i) => (
