@@ -368,7 +368,7 @@ header .intro-text {
 		width: 55%;
 		padding: 0 0 50px 0;
 	}
-	header .apply-now-btn {
+	header .apply-now-btn-old-restore-me-later {
 		position: absolute;
 		bottom: 20%;
 		left: 20%;
@@ -446,6 +446,11 @@ header .intro-text {
 	width: 60%;
 	background-color: transparent;
 	opacity: 50%;
+}
+#comingsoon .apply-now-btn {
+	color: transparent;
+	background-color: transparent;
+	width: 60%;
 }
 #comingsoon button {
 	position: relative;
@@ -886,6 +891,10 @@ color: #777;
 	}
   }
 /* Custom styles for Carousel */
+.my-carousel img {
+	width: 75% !important;
+	height: auto !important;
+}
 .react-multi-carousel-list {
 	display: flex;
 	align-items: center;
@@ -951,4 +960,10 @@ color: #777;
 	text-align: center;
 	z-index: 2;
 	position: relative;
+  }
+  .react-multiple-carousel__arrow--left {
+	left: calc(0% + 1px) !important;
+  }
+  .react-multiple-carousel__arrow--right {
+	right: calc(0% + 1px) !important;
   }
