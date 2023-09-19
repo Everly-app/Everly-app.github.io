@@ -1,7 +1,7 @@
 {
   "name": "landingpage-react-template",
   "private": true,
-  "homepage": "https://www.merlo.vip",
+  "homepage": "https://merlo.vip",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@testing-library/jest-dom": "^6.1.2",
