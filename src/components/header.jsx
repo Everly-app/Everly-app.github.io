@@ -36,8 +36,8 @@ export const Header = (props) => {
   return (
     <header id='header'>
       <div className='intro'>
-            <CircleContainer />
         <div className='overlay'>
+          <CircleContainer />
           <div className='container'>
             <div className='row fade-in'>
               <div className='col-md-5 col-sm-12 col-md-offset-0 intro-text'>
@@ -46,14 +46,15 @@ export const Header = (props) => {
                 {isMobile ?
                 ''
                 :
-                <div className='apply-now-btn'>
-                  <Link
-                    to='/signup'
-                    className='btn btn-custom btn-lg page-scroll apply-now'
-                  >
-                    Apply Now
-                  </Link>
-                </div>
+                ''
+                // <div className='apply-now-btn'>
+                //   <Link
+                //     to='/signup'
+                //     className='btn btn-custom btn-lg page-scroll apply-now'
+                //   >
+                //     Apply Now
+                //   </Link>
+                // </div>
                 }
                 <div>
                   <img className='learn-more' src={props.data ? (isMobile ? props.data.learn_more_mobile : props.data.learn_more) : ''} alt='Learn More' />

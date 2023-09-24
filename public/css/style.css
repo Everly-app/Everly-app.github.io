@@ -308,7 +308,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 }
 .intro .overlay {
-	background: rgba(0,0,0,0.0);
+	backdrop-filter: blur(3px);
 }
 .intro h1 {
 	font-family: 'Raleway', sans-serif;
@@ -860,7 +860,7 @@ color: #777;
 
 .circle {
 	border-radius: 50%;
-	background-color: #ffffaa05;
+	background-color: #ffffaa03;
 	position: absolute;
 	opacity: 0.5;
   }

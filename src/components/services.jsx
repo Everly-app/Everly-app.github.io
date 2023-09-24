@@ -18,7 +18,7 @@ export const Services = (props) => {
       <div className='container'>
         {isMobile ? (
         <Carousel
-          swipeable={false}
+          swipeable={true}
           draggable={false}
           showDots={true}
           responsive={responsive}

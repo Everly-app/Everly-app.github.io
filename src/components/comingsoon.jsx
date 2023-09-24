@@ -38,9 +38,9 @@ export const ComingSoon = (props) => {
                 </div>
                 :
                 <div className='row'>
-                  <a href=".">
-                    <img className='apple-store-image' src='img/apple_store_button.svg' alt='apple store' />
-                  </a>
+                  <Link to="/signup">
+                    <img className='apply-now-btn' src='img/apply-now-desktop.svg' alt='Apply Now' />
+                  </Link>
                 </div>
               }
             </div>
