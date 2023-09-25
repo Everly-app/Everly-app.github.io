@@ -447,6 +447,13 @@ header .intro-text {
 	color: transparent;
 	background-color: transparent;
 	width: 60%;
+	transition: opacity 0.5s ease-in-out; /* Animation duration and type */
+}
+#comingsoon .apply-now-btn:hover {
+	color: transparent;
+	background-color: transparent;
+	opacity: 50%;
+	width: 60%;
 }
 #comingsoon button {
 	position: relative;
