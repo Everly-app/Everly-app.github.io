@@ -57,7 +57,7 @@ export const Header = (props) => {
                 // </div>
                 }
                 <div>
-                  <img className='learn-more' src={props.data ? (isMobile ? props.data.learn_more_mobile : props.data.learn_more) : ''} alt='Learn More' />
+                  <img onClick={props.handleClick ? props.handleClick : () => {}} className='learn-more clickable-image' src={props.data ? (isMobile ? props.data.learn_more_mobile : props.data.learn_more) : ''} alt='Learn More' />
                 </div>
               </div>
               <div>

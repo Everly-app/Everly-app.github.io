@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 // import { Navigation } from './components/navigation'
 import { Header } from './components/header'
@@ -24,13 +24,21 @@ const LandingPage = () => {
     setLandingPageData(JsonData)
   }, [])
 
+  const ref = useRef(null);
+
+  const handleClick = () => {
+    ref.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <div>
       {/* <Navigation /> */}
-      <Header data={landingPageData.Header} />
+      <Header handleClick={handleClick} data={landingPageData.Header} />
       {/* <Features data={landingPageData.Features} /> */}
       {/* <About data={landingPageData.About} /> */}
-      <Services data={landingPageData.Services} />
+      <div ref={ref}>
+        <Services data={landingPageData.Services} />
+      </div>
       {/* <Gallery /> */}
       {/* <Testimonials data={landingPageData.Testimonials} /> */}
       <ComingSoon data={landingPageData.ComingSoon} />
