@@ -347,6 +347,12 @@ header .learn-more {
 	position: absolute;
 	bottom: 15%;
 }
+header .instagram-logo {
+	display: none; /* TODO: re-enable once instagram is created */
+	position: absolute;
+	top: 10%;
+	right: 10%;
+}
 header .intro-text {
 	padding-top: 250px;
 	padding-bottom: 350px;
@@ -382,6 +388,12 @@ header .intro-text {
 		right: 0;
 		bottom: 15%;
 		text-align: center;
+	}
+	header .instagram-logo {
+		display: none; /* TODO: re-enable once instagram is created */
+		position: absolute;
+		top: 7%;
+		right: 5%;
 	}
 }
 /* Features Section */

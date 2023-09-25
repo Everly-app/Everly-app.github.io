@@ -60,6 +60,11 @@ export const Header = (props) => {
                   <img className='learn-more' src={props.data ? (isMobile ? props.data.learn_more_mobile : props.data.learn_more) : ''} alt='Learn More' />
                 </div>
               </div>
+              <div>
+                <Link to={props.data ? props.data.instagram_website : ''}>
+                  <img className='instagram-logo' src={props.data ? props.data.instagram : ''} alt='Instagram' />
+                </Link>
+              </div>
             </div>
           </div>
         </div>
