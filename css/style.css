@@ -356,25 +356,47 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	width: 100%;
 	padding: 0 0 0px 0;
 }
-.intro .apply-now {
+.intro .footer-container {
 	position: absolute;
+	width: 100%;
+    bottom: 0;
 	left: 50%;
 	transform: translateX(-50%);
-	bottom: 3.5em;
-	transition: transform 0.2s, filter 0.2s;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 100vh;
+}
+.intro .footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+.intro .slot-counter {
+	font-size: 5rem;
+	padding-bottom: 0.5rem;
+}
+.intro .spots-left {
+	padding: 0.3rem 0 1rem 0;
+	font-size: 1.5rem;
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	color: #878787;
+}
+.intro .apply-now {
+	padding-bottom: 1rem;
+	width: 100%;
+	filter: brightness(90%);
+	transition: transform 1s, filter 1s;
 }
 .intro .apply-now:hover {
-	filter: brightness(70%);
+	filter: brightness(60%);
 }
-.intro .learn-more {
-	position: absolute;
-	bottom: 15%;
-}
-.intro .instagram-logo {
-	display: none; /* TODO: re-enable once instagram is created */
-	position: absolute;
-	top: 10%;
-	right: 10%;
+.intro .copyright {
+	padding-bottom: 1.5rem;
+	font-size: 1.2rem;
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	color: #878787;
 }
 .intro .terms-and-conditions {
 	position: absolute;
@@ -385,16 +407,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	top: 2.5rem;
 	right: 3.5rem;
 }
-.intro .copyright {
-	position: absolute;
-	left: 50%;
-	transform: translateX(-50%);
-	bottom: 2rem;
-	font-size: 1.2rem;
-	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-	color: #878787;
-}
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
 	.intro .logo {
 		width: 100%;
 	}
@@ -406,9 +419,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 		text-align: center;
 		width: 55%;
 		padding: 0 0 0rem 0;
-	}
-	.intro .apply-now {
-		width: 50%;
 	}
 }
 /* Features Section */
@@ -996,4 +1006,17 @@ color: #777;
   }
   .react-multiple-carousel__arrow--right {
 	right: calc(0% + 1px) !important;
+  }
+
+  /* react-slot-counter */
+  .char {
+	padding: 0 10px;
+	font-size: 3rem;
+	background: #26262650;
+  }
+  .char + .char {
+	margin-left: 5px;
+  }
+  .sep {
+	padding: 0 2px;
   }
