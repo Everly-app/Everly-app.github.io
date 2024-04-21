@@ -295,7 +295,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	50% { opacity: 1; }
 	100% { opacity: 0; }
   }
-/* Header Section */
+/* Intro Section */
 .intro {
 	display: table;
 	position: relative;
@@ -303,7 +303,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	width: 100%;
 	padding: 0;
 	background-image: url("../../img/background.png"), radial-gradient(100% 239.32% at 0% 0%, rgba(37, 37, 37, 0.87) 0%, rgba(2, 2, 2, 0.87) 100%);
-	box-shadow: inset 0 0 0 2000px rgba(40, 40, 40, 0.3);
+	box-shadow: inset 0 0 0 2000px rgba(30, 30, 30, 0.3);
 	background-blend-mode: overlay;
 	background-position: center;
 	-moz-background-size: cover;
@@ -311,7 +311,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 }
 .intro .overlay {
-	backdrop-filter: blur(3px);
+	backdrop-filter: blur(7px);
+	height: 100%;
+	width: 100%;
 }
 .intro h1 {
 	font-family: 'Raleway', sans-serif;
@@ -334,69 +336,79 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
+.intro .logo-container {
+	display: flex;
+	align-items: center; /* Vertical alignment */
+	justify-content: center; /* Horizontal alignment */
+	height: 100vh; /* Full height of the viewport */
+}
+.intro .logo {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 25%;
+}
 .intro .logo-image {
-	width: 90%;
-	padding: 0 0 35px 0;
+	width: 100%;
+	padding: 0 0 10% 0;
 }
 .intro .logo-slogan {
-	width: 80%;
-	padding: 0 0 50px 0;
+	width: 100%;
+	padding: 0 0 0px 0;
 }
-header .apply-now {
-	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-	font-weight: 700;
+.intro .apply-now {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 3.5em;
+	transition: transform 0.2s, filter 0.2s;
 }
-header .learn-more {
+.intro .apply-now:hover {
+	filter: brightness(70%);
+}
+.intro .learn-more {
 	position: absolute;
 	bottom: 15%;
 }
-header .instagram-logo {
+.intro .instagram-logo {
 	display: none; /* TODO: re-enable once instagram is created */
 	position: absolute;
 	top: 10%;
 	right: 10%;
 }
-header .intro-text {
-	padding-top: 250px;
-	padding-bottom: 350px;
-	text-align: left;
+.intro .terms-and-conditions {
+	position: absolute;
+	font-size: 1.2rem;
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	color: #878787;
+	top: 2.5rem;
+	right: 3.5rem;
 }
-@media only screen and (max-width: 1000px) {
-	header .intro-text {
-		padding-top: 300px;
-		padding-bottom: 350px;
-		text-align: center;
+.intro .copyright {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 2rem;
+	font-size: 1.2rem;
+	font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+	color: #878787;
+}
+@media only screen and (max-width: 768px) {
+	.intro .logo {
+		width: 100%;
 	}
 	.intro .logo-image {
 		text-align: center;
 		width: 60%;
-		padding: 0 0 20px 0;
 	}
 	.intro .logo-slogan {
 		text-align: center;
 		width: 55%;
-		padding: 0 0 50px 0;
+		padding: 0 0 0rem 0;
 	}
-	header .apply-now-btn-old-restore-me-later {
-		position: absolute;
-		bottom: 20%;
-		left: 20%;
-		right: 20%;
-	}
-	header .learn-more {
-		position: absolute;
-		margin: auto;
-		width: 30%;
-		left: 0;
-		right: 0;
-		bottom: 15%;
-		text-align: center;
-	}
-	header .instagram-logo {
-		display: none; /* TODO: re-enable once instagram is created */
-		position: absolute;
-		top: 7%;
-		right: 5%;
+	.intro .apply-now {
+		width: 50%;
 	}
 }
 /* Features Section */
