@@ -201,6 +201,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	-o-animation: fadeIn 5s;
 	-ms-animation: fadeIn 5s;
   }
+.fade-in-quick {
+	animation: fadeIn 2.5s;
+	-webkit-animation: fadeIn 2.5s;
+	-moz-animation: fadeIn 2.5s;
+	-o-animation: fadeIn 2.5s;
+	-ms-animation: fadeIn 2.5s;
+  }
   
   @keyframes fadeIn {
 	0% { opacity: 0; }
@@ -311,8 +318,13 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	background-size: cover;
 }
 .intro .overlay {
+	display: flex;
+	position: relative;
+	align-items: center; /* Vertical alignment */
+	justify-content: center; /* Horizontal alignment */
+	flex-direction: column;
 	backdrop-filter: blur(7px);
-	height: 100%;
+	height: 100vh;
 	width: 100%;
 }
 .intro h1 {
@@ -336,42 +348,29 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	margin: 0 auto;
 	margin-bottom: 60px;
 }
-.intro .logo-container {
-	display: flex;
-	align-items: center; /* Vertical alignment */
-	justify-content: center; /* Horizontal alignment */
-	height: 100vh; /* Full height of the viewport */
-}
 .intro .logo {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
+	position: absolute;
 	width: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+.intro .form-container {
+	position: absolute;
+	width: 25%;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .intro .logo-image {
 	width: 100%;
-	padding: 0 0 10% 0;
-}
-.intro .logo-slogan {
-	width: 100%;
-	padding: 0 0 0px 0;
-}
-.intro .footer-container {
-	position: absolute;
-	width: 100%;
-    bottom: 0;
-	left: 50%;
-	transform: translateX(-50%);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    height: 100vh;
 }
 .intro .footer {
+	position: absolute;
+	bottom: 0;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 100%;
 }
 .intro .slot-counter {
 	font-size: 5rem;
@@ -386,7 +385,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro .apply-now {
 	padding-bottom: 1rem;
 	width: 100%;
-	filter: brightness(90%);
+	filter: brightness(95%);
 	transition: transform 1s, filter 1s;
 }
 .intro .apply-now:hover {
@@ -407,20 +406,134 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	top: 2.5rem;
 	right: 3.5rem;
 }
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 767px) {
 	.intro .logo {
-		width: 100%;
-	}
-	.intro .logo-image {
-		text-align: center;
 		width: 60%;
 	}
-	.intro .logo-slogan {
-		text-align: center;
-		width: 55%;
-		padding: 0 0 0rem 0;
+	.intro .form-container {
+		width: 85%;
+	}
+	.intro .logo-image {
+		width: 100%;
+	}
+	.intro .footer {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.intro .apply-now {
+		padding-bottom: 1rem;
+		width: 100%;
+		filter: brightness(95%);
+		transition: transform 1s, filter 1s;
 	}
 }
+form {
+	width: 80%;
+	z-index: 1;
+}
+
+form div {
+	margin-bottom: 1rem;
+}
+  
+form label {
+	display: block;
+	color: #fff;
+}
+  
+form input {
+	font-size: 1.5rem;
+	margin: 0.8rem 0;
+	padding: 0 0.5rem;
+	height: 4.5rem;
+	width: 100%;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	color: white;
+	background-color: #00000070;
+	border-radius: 8px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+form input[type="submit"] {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+form input[type="submit"]:hover {
+	background-color: transparent;
+	font-weight: 700;
+	border-width: 2px;
+}
+
+form p {
+	font-size: 1.5rem;
+	color: #ff9900;
+}
+
+form .submit-failure {
+	color: orangered;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+form .submit-waiting {
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+form .submit-success {
+	color: greenyellow;
+	font-size: 1.5rem;
+	text-align: center;
+}
+
+/* Hide the default radio button */
+form input[type="radio"] {
+	position: absolute;
+	left: -9999999px;
+}
+
+form .gender-radio {
+	margin: 0.8rem 0;
+	height: 4.5rem;
+	width: 100%;
+	border-color: white;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #00000070;
+	border-radius: 8px;
+	box-sizing: border-box;
+	text-align: center;
+	display: flex;
+	align-items: center; /* Vertical alignment */
+	justify-content: center; /* Horizontal alignment */
+}
+
+form .gender-radio-item {
+	width: 100%;
+	height: 40%;
+}
+
+/* Style for the custom radio button */
+form input[type="radio"] + span {
+	margin: 0.5rem 0;
+	padding: 0 0.5rem;
+	width: 100%;
+	font-size: 1.5rem;
+	color: gray;
+}
+
+/* Change color when radio button is checked */
+form input[type="radio"]:checked + span {
+  color: white;
+}
+
 /* Features Section */
 #features {
 	padding: 100px 0;
