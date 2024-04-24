@@ -391,6 +391,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 .intro .apply-now:hover {
 	filter: brightness(60%);
 }
+.intro .invitation-mark {
+	font-size: 2rem;
+	padding-bottom: 13.5rem;
+}
 .intro .copyright {
 	padding-bottom: 1.5rem;
 	font-size: 1.2rem;
