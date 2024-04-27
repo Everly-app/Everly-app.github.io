@@ -506,8 +506,7 @@ form .submit-success {
 
 /* Hide the default radio button */
 form input[type="radio"] {
-	position: absolute;
-	left: -9999999px;
+	display: none;
 }
 
 form .gender-radio {
@@ -527,22 +526,24 @@ form .gender-radio {
 }
 
 form .gender-radio-item {
+	margin: 0.8rem 0;
+	border-radius: 8px;
 	width: 100%;
-	height: 40%;
+	height: 100%;
+	display: flex;
+	align-items: center; /* Vertical alignment */
+	justify-content: center; /* Horizontal alignment */
 }
 
 /* Style for the custom radio button */
 form input[type="radio"] + span {
-	margin: 0.5rem 0;
-	padding: 0 0.5rem;
-	width: 100%;
 	font-size: 1.5rem;
 	color: gray;
 }
 
 /* Change color when radio button is checked */
 form input[type="radio"]:checked + span {
-  color: white;
+	color: white;
 }
 
 /* Features Section */
