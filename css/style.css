@@ -434,7 +434,7 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	.intro .mobile-apply-now-container {
 		position: absolute;
 		width: 60%;
-		top: 66%;
+		top: 75%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		display: flex;
@@ -462,6 +462,9 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	.intro .terms-and-conditions {
 		top: 1.5rem;
 		right: 2rem;
+	}
+	.intro .footer {
+		bottom: 10%;
 	}
 }
 form {
