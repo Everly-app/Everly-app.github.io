@@ -361,6 +361,8 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
+	padding: 0 15px; /* Adds some padding on the sides */
+    box-sizing: border-box; /* Includes padding in width calculation */
 }
 .intro .logo-image {
 	width: 100%;
