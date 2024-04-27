@@ -213,6 +213,17 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	-o-animation: fadeIn 2.5s;
 	-ms-animation: fadeIn 2.5s;
   }
+
+/* Apply these styles to the element you want to fade out */
+.fade-out {
+    opacity: 1;
+    transition: opacity 0.5s ease; /* Adjust timing and easing as needed */
+}
+
+/* Add this class when you want the element to fade out */
+.fade-out.hidden {
+    opacity: 0;
+}
   
   @keyframes fadeIn {
 	0% { opacity: 0; }
@@ -271,42 +282,53 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	100% { opacity: 0; }
   }
 .fade-in-out {
-	animation: fadeInOut 5s;
-	-webkit-animation: fadeInOut 5s;
-	-moz-animation: fadeInOut 5s;
-	-o-animation: fadeInOut 5s;
-	-ms-animation: fadeInOut 5s;
+	animation: fadeInOut 7s;
+	-webkit-animation: fadeInOut 7s;
+	-moz-animation: fadeInOut 7s;
+	-o-animation: fadeInOut 7s;
+	-ms-animation: fadeInOut 7s;
 	animation-iteration-count: infinite;
   }
-  
-  @keyframes fadeInOut {
+.fade-in-out-once {
+	animation: fadeInOut 7s;
+	-webkit-animation: fadeInOut 7s;
+	-moz-animation: fadeInOut 7s;
+	-o-animation: fadeInOut 7s;
+	-ms-animation: fadeInOut 7s;
+	animation-iteration-count: 1;
+}
+
+@keyframes fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	60% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-moz-keyframes fadeInOut {
 	0% { opacity: 0; }
 	50% { opacity: 1; }
 	100% { opacity: 0; }
-  }
-  
-  @-moz-keyframes fadeInOut {
+}
+
+@-webkit-keyframes fadeInOut {
+	0% { opacity: 0; }
+	50% { opacity: 1; }
+	60% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@-o-keyframes fadeInOut {
 	0% { opacity: 0; }
 	50% { opacity: 1; }
 	100% { opacity: 0; }
-  }
-  
-  @-webkit-keyframes fadeOut {
-	0% { opacity: 1; }
-	100% { opacity: 0; }
-  }
-  
-  @-o-keyframes fadeInOut {
+}
+
+@-ms-keyframes fadeInOut {
 	0% { opacity: 0; }
 	50% { opacity: 1; }
 	100% { opacity: 0; }
-  }
-  
-  @-ms-keyframes fadeInOut {
-	0% { opacity: 0; }
-	50% { opacity: 1; }
-	100% { opacity: 0; }
-  }
+}
 /* Intro Section */
 .intro {
 	display: table;
@@ -462,9 +484,6 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 	.intro .terms-and-conditions {
 		top: 1.5rem;
 		right: 2rem;
-	}
-	.intro .footer {
-		bottom: 10%;
 	}
 }
 form {
