@@ -436,6 +436,10 @@ a:focus, .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:acti
 		filter: brightness(95%);
 		transition: transform 1s, filter 1s;
 	}
+	.intro .terms-and-conditions {
+		top: 1.5rem;
+		right: 2rem;
+	}
 }
 form {
 	width: 80%;
