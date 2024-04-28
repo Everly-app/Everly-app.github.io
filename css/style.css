@@ -1179,10 +1179,21 @@ color: #777;
   }
 
   /* react-slot-counter */
+  .char-hidden {
+	padding: 0 7px;
+	font-size: 1.8rem;
+	color: #00000000;
+	background: #00000000;
+  }
   .char {
 	padding: 0 7px;
 	font-size: 1.8rem;
 	background: #26262650;
+	animation: fadeIn 2.5s;
+	-webkit-animation: fadeIn 2.5s;
+	-moz-animation: fadeIn 2.5s;
+	-o-animation: fadeIn 2.5s;
+	-ms-animation: fadeIn 2.5s;
   }
   .char + .char {
 	margin-left: 3px;
